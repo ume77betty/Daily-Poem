@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Daily-Poem/static/css/main.20741e5e.chunk.css",
+    "main.js": "/Daily-Poem/static/js/main.e8b554f5.chunk.js",
+    "main.js.map": "/Daily-Poem/static/js/main.e8b554f5.chunk.js.map",
+    "runtime-main.js": "/Daily-Poem/static/js/runtime-main.3b28db6d.js",
+    "runtime-main.js.map": "/Daily-Poem/static/js/runtime-main.3b28db6d.js.map",
+    "static/js/2.7541b7bb.chunk.js": "/Daily-Poem/static/js/2.7541b7bb.chunk.js",
+    "static/js/2.7541b7bb.chunk.js.map": "/Daily-Poem/static/js/2.7541b7bb.chunk.js.map",
+    "static/js/3.dfbb8c96.chunk.js": "/Daily-Poem/static/js/3.dfbb8c96.chunk.js",
+    "static/js/3.dfbb8c96.chunk.js.map": "/Daily-Poem/static/js/3.dfbb8c96.chunk.js.map",
+    "index.html": "/Daily-Poem/index.html",
+    "static/css/main.20741e5e.chunk.css.map": "/Daily-Poem/static/css/main.20741e5e.chunk.css.map",
+    "static/js/2.7541b7bb.chunk.js.LICENSE.txt": "/Daily-Poem/static/js/2.7541b7bb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b28db6d.js",
+    "static/js/2.7541b7bb.chunk.js",
+    "static/css/main.20741e5e.chunk.css",
+    "static/js/main.e8b554f5.chunk.js"
+  ]
+}
