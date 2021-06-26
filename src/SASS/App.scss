@@ -1,0 +1,286 @@
+@import "./animation.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content };        //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) { @content };       //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) { @content };        //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) { @content };        //1800px
+  }
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; // 1rem = 10px
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px, 12/16 = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-size: cover;
+}
+
+
+.header {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  height: 100vh;
+
+  &__welcome {
+    font-weight: 500;
+    font-size: 5rem;
+    padding: 15rem 2rem 1.5rem 2rem;
+    animation: moveInBottom 1s ease-out;
+
+    @include respond((phone)) {
+      padding: 5rem 2rem 1.5rem 2rem;
+      font-size: 4rem;
+    }
+  }
+
+  &__greeting {
+    font-weight: 300;
+    font-size: 3rem;
+    padding: 1.5rem 2rem 3rem 2rem;
+    animation: moveInBottom2 2s ease-out;
+
+    @include respond((phone)) {
+      font-size: 2rem;
+    }
+  }
+
+  &__copyright {
+    position: fixed;
+    bottom: 2rem;
+    right: 3px;
+    padding: 0rem 2rem 0rem 1rem;
+    font-size: 1.3rem;
+    text-align: right;
+
+    @include respond((phone)) {
+      font-size: 1rem;
+      bottom: 1rem;
+    }
+  }
+}
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+
+    @include respond((phone)) {
+      padding: 1.2rem 2.5rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(black, .1);
+
+    &::after {
+      transform: scaleX(1.2) scaleY(1.4);
+      opacity: 0;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    z-index: -1;
+    transition: all .4s;
+  }  
+
+  &:active,
+  &:focus {
+    outline: none; // Change for button element
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(black, .1);
+  }
+
+  &__getAPI {
+    background-color: rgba(white, .8);
+    animation: moveInBottom3 3s ease-out;
+    border-radius: 10rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+
+    &::after {
+      background: white;
+    }
+  }
+
+  &__forward {
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 1rem 2rem;
+    background-color: rgba(white, .8);
+    animation: moveInBottom2 2s ease-in;
+
+    @include respond(phone) {
+      font-size: 1rem;
+      padding: 1rem 1.5rem;
+    }
+  }
+}
+
+.error {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-top: 10rem;
+}
+
+.poem {
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  padding: 5rem 5rem 2rem 5rem;
+  animation: moveInBottom 1s ease-in;
+
+  &__header {
+    font-size: 4rem;
+    font-weight: 400;
+    padding: 1rem 2rem;
+    display: inline-block;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__poet {
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 0rem 2rem 3rem 2rem;
+
+    @include respond(phone) {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__content {
+    font-size: 2rem;
+    font-weight: 300;
+    list-style: none;
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+
+    & li {
+      padding: 3px 5px;
+    }
+  }
+
+  &__url {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: rgba(black, .9);
+    }
+  }
+}
+
+.paragraph {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  padding: 0rem 2rem 0rem 1rem;
+  font-size: 1.3rem;
+  position: fixed;
+  bottom: 2rem;
+  font-weight: 300;
+  animation: moveInBottom2 2s ease-in;
+
+  @include respond(tab-port) {
+    bottom: .5rem;
+    position: static;
+    display: inline-block;
+    padding-top: 2rem;
+  }
+  
+  @include respond(phone) {
+    position: static;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem 2rem 1rem 2rem;
+    display: inline-block;
+    color: white;
+  }
+
+  
+
+  &--info {
+    text-align: left;
+    left: 3px;
+
+    @include respond(tab-port) {
+      margin-right: 18rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 1rem;
+      margin-right: 0rem;
+    }
+    
+  }
+
+  &--API {
+    text-align: right;
+    right: 3px;
+
+    & a {
+      font-style: italic;
+    }
+  }
+}
