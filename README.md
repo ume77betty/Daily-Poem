@@ -23,6 +23,6 @@ A little secret about this Web App is that background color also generate random
 <br />
 I matched a few sets of colors that I think it's look good. I wish you think so too.
 <br />
-Backgroung color inspirations are from [Coolors](https://coolors.co/), it's really helpful!
+Background color inspirations are from [Coolors](https://coolors.co/), it's really helpful!
 <br />
 I wish all of you enjoy this Web App, I really enjoy coding this Web App. :)
