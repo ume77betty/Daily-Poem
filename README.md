@@ -1,6 +1,6 @@
 # Daily-Poem
 
-### Site: https://ume77betty.github.io/Daily-Poem/
+### Demo: https://ume77betty.github.io/Daily-Poem/
 #### API in this page is from [Poemist API](https://poemist.github.io/poemist-apidoc/#introduction).
 
 ---
